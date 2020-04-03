@@ -12,11 +12,11 @@ function slide() {
 
     let prevBtn = document.getElementById("prev");
     let nextBtn = document.getElementById("next");
-
     let background = document.querySelector(".background");
     let indices = document.querySelectorAll(".index");
 
-    let bgImgs = ["Indonesia.jpg", "Kerala.jpg", "Bali.jpg", "Thailand.jpg"];
+
+    let bgImgs = ["./Slider_Cover/cover.jpg", "./Slider_Cover/cover-2.jpg", "Bali.jpg", "Thailand.jpg"];
 
     let currentIndex = 0;
 
@@ -24,12 +24,12 @@ function slide() {
     indices[currentIndex].classList.add("active");
 
     var myAnimation = new hoverEffect({
-      parent: document.querySelector(".background"),
+      parent: background,
       intensity: 0.3,
-      imagesRatio: 1080 / 1920,
+      imagesRatio: 960 / 100,
       image1: `img/${bgImgs[0]}`,
       image2: `img/${bgImgs[1]}`,
-      displacementImage: "img/14.jpg",
+      displacementImage: "img/displacement/10.jpg",
       hover: false
     });
 
@@ -39,7 +39,7 @@ function slide() {
       imagesRatio: 1080 / 1920,
       image1: `img/${bgImgs[1]}`,
       image2: `img/${bgImgs[2]}`,
-      displacementImage: "img/14.jpg",
+      displacementImage: "img/displacement/15.jpg",
       hover: false
     });
 
@@ -49,7 +49,7 @@ function slide() {
       imagesRatio: 1080 / 1920,
       image1: `img/${bgImgs[2]}`,
       image2: `img/${bgImgs[3]}`,
-      displacementImage: "img/14.jpg",
+      displacementImage: "img/displacement/13.jpg",
       hover: false
     });
 
@@ -134,7 +134,6 @@ function slide() {
       }
 
       let title = document.querySelectorAll("#title h4");
-      let description = document.querySelectorAll("#description p");
 
       title.forEach(title => {
         TweenMax.to(title, 1, {
@@ -142,20 +141,6 @@ function slide() {
           ease: Strong.easeInOut
         });
       });
-
-      description.forEach((description, index) => {
-        let opacity = 0;
-        if (index === currentIndex) {
-          opacity = 1;
-        } else {
-          opacity = 0;
-        }
-        TweenMax.to(description, 1, {
-          top: `${descriptionDisplacement}px`,
-          ease: Strong.easeInOut,
-          opacity: opacity
-        });
-      })
     }
   });
 }
