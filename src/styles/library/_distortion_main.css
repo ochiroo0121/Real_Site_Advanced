@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
 }
 
@@ -17,10 +17,12 @@
   height: 100%;
   top: 0;
   z-index: -1;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
 
+.background canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 nav {
@@ -131,21 +133,21 @@ nav ul li {
 }
 
 .text h4 {
-  font-family: "Oswald";
   font-size: 150px;
   color: white;
   position: relative;
+  
 }
 
 .btn {
   width: 150px;
-  background-color: #25609f;
+  background-color: #ff3300;
   display: flex;
   align-items: center;
   padding: 10px 10px;
   border-radius: 8px;
   margin-top: 60px;
-  justify-content: space-evenly;
+  justify-content: space-around;
   cursor: pointer;
 }
 
@@ -155,6 +157,7 @@ nav ul li {
 }
 
 .btn i {
+  padding-left: 10px;
   color: white;
 }
 
@@ -191,6 +194,7 @@ nav ul li {
 
 .glide__slide--active .slider-image {
   height: 400px;
+  z-index: 5;
 }
 
 .slider-image img {
@@ -221,20 +225,6 @@ nav ul li {
 
 .active {
   opacity: 1;
-}
-
-.bookmark {
-  position: absolute;
-  right: 10px;
-  top: 20px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: grey;
 }
 
 .controls {
@@ -335,8 +325,8 @@ nav ul li {
     margin-top: 30px;
   }
   .slide {
-    height: 300px;
-    width: 200px;
+    height: 350px;
+    width: 250px;
   }
   .slider-image {
     height: 220px;
@@ -349,8 +339,11 @@ nav ul li {
   .side-indicator {
     width: 120px;
   }
+  nav {
+    z-index: 999;
+  }
   #title {
-    width: 200px;
+    width: 220px;
     height: 120px;
     position: relative;
     margin-bottom: 0;
@@ -386,7 +379,7 @@ nav ul li {
   }
   .slide {
     height: 300px;
-    width: 200px;
+    width: 180px;
   }
   .slider-image {
     height: 180px;
@@ -397,6 +390,5 @@ nav ul li {
 
   .glide__slide--active .slider-image {
     height: 220px;
-    z-index: 5;
   }
 }
