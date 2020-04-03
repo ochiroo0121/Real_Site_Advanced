@@ -1,9 +1,7 @@
-body {
-    background-color: $mainColor;
-}
-
-.turshilt {
-    h1 {
-        color: $mainGreen;
-    }
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
 }
