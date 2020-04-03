@@ -16,7 +16,7 @@ function slide() {
     let indices = document.querySelectorAll(".index");
 
 
-    let bgImgs = ["./Slider_Cover/cover.jpg", "./Slider_Cover/cover-2.jpg", "Bali.jpg", "Thailand.jpg"];
+    let bgImgs = ["./Slider_Cover/cover_bg.jpg", "./Slider_Cover/cover_2_bg.jpg", "Bali.jpg", "Thailand.jpg"];
 
     let currentIndex = 0;
 
