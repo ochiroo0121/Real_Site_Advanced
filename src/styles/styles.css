@@ -3,3 +3,6 @@
 @import "../styles/base/_global.css";
 @import "../styles/library/glide.core.min.css";
 @import "../styles/library/_distortion_main.css";
+@import "../styles/library/venobox.css";
+@import "../styles/library/bootstrap.min.css";
+@import "../styles/modules/style_video.css";
