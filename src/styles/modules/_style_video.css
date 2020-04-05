@@ -7,6 +7,10 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   background-image: $Bg_Gradient;
+  transition: 0.5s linear;
+}
+.bodyChange {
+  overflow-y: hidden;
 }
 
 /* Back-Top */
