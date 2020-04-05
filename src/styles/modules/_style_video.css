@@ -2,10 +2,11 @@
 @import "../modules/_video-footer.css";
 
 .videoBody {
-  background: #0f0f0f;
+  width: 100%;
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  background-image: $Bg_Gradient;
 }
 
 /* Back-Top */
@@ -62,101 +63,4 @@
 
 .backTopActive i {
   background-color: var(--black);
-}
-
-/* Media ********************************************************/
-@media only screen and (max-width: 1050px) {
-  /* Footer ******************************************************/
-  .footer-container {
-    grid-column: 2 / span 1;
-    grid-row: 4 / span 1;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto 50px;
-  }
-  .footer-container .footer-logo {
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
-    height: 200px;
-  }
-  .footer-container .footer-message {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
-    border: none;
-    height: 320px;
-  }
-  .footer-container .footer-contact {
-    grid-column: 1 / span 2;
-    grid-row: 2 / span 1;
-    height: 200px;
-    border-top: 1px solid #797979;
-  }
-  .footer-container .footer-copy {
-    grid-column: 1 / span 2;
-    grid-row: 4 / span 1;
-  }
-}
-
-@media only screen and (max-width: 760px) {
-  #carouselExampleIndicators {
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-  }
-
-  .arrowD {
-    display: none;
-  }
-
-  .video-container {
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
-  }
-
-  .video-container .btn {
-    padding: 10px 30px;
-    width: 100px;
-    height: 60px;
-  }
-  .video-container .btn h6 {
-    display: none;
-  }
-  .video-container .btn i {
-    font-size: 3rem;
-    top: 6px;
-    left: 23px;
-  }
-  /* Footer ******************************************************/
-  .footer-container {
-    grid-column: 1 / span 1;
-    grid-row: 4 / span 1;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto 50px;
-  }
-  .footer-container .footer-logo {
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
-    height: 200px;
-  }
-  .footer-container .footer-message {
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-    border: none;
-    border-top: 1px solid #797979;
-    border-bottom: 1px solid #797979;
-    height: 320px;
-  }
-  .footer-container .footer-message .messege {
-    max-width: 350px;
-  }
-  .footer-container .footer-message button {
-    max-width: 300px;
-  }
-  .footer-container .footer-contact {
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
-    height: 200px;
-  }
-  .footer-container .footer-copy {
-    grid-column: 1 / span 1;
-    grid-row: 4 / span 1;
-  }
 }

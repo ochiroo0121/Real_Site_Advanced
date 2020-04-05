@@ -12,17 +12,24 @@
   </head>
 
   <body class="videoBody">
-    <!-- Scroll Top ***********************************************-->
-    <a href="#" class="backTop"><i class="fas fa-chevron-up"></i></a>
+    <nav class="nav">
+      <div class="nav_logo">
+        <img src="./img/Mr.QL_Avatar_dot.png" alt="" />
+      </div>
+      <div class="nav_toggle">
+        <span class="span s1"></span>
+        <span class="span s2"></span>
+        <span class="span s3"></span>
+      </div>
+      <ul class="nav_ul">
+        <li><a href="index.html">Нүүр</a></li>
+        <li><a href="video.html">Видео</a></li>
+        <li><a href="contact.html">Холбогдох</a></li>
+      </ul>
+    </nav>
 
     <!-- Video Gallery HESEG ****************************************-->
     <div class="video-container" id="gallery">
-      <div class="dark-container">
-        <h2 class="darkh2 darkH3">Dark Mode</h2>
-        <div class="dark-mode ligthActive">
-          <div class="dark-con"></div>
-        </div>
-      </div>
       <a
         class="venobox"
         data-autoplay="true"
@@ -631,10 +638,10 @@
       </div>
     </div>
     <!-- Footer **************************************************** -->
-    <footer class="footer-container">
+    <footer class="footer">
       <div class="footer-logo">
         <img src="/img/Mr.QL_Avatar_dot.png" alt="" />
-        <div class="text">
+        <div class="footer-logo__text">
           <h3>Mr.Quality Lyrics Mongolia</h3>
           <p>Албан ёсны вэбсайт</p>
         </div>
@@ -677,14 +684,11 @@
           </div>
         </div>
       </div>
-      <div class="footer-copy">
-        <p>Бүх эрх хуулиар хамгаалагдсан © 2020 он</p>
-        <a href="#"><span>Platinum</span> Quality <span>"ХХК"</span></a>
+      <div class="footer__copy">
+        <p class="footer__copy--p">Бүх эрх хуулиар хамгаалагдсан © 2020 он</p>
+        <a class="footer__copy--a href="#"><span>Platinum</span> Quality <span>"ХХК"</span></a>
       </div>
     </footer>
-
-    <!-- darkmode -->
-    <script src="/js/darkmode.js"></script>
 
     <!-- Video Gallery_VenoBox -->
     <script
@@ -693,7 +697,10 @@
       crossorigin="anonymous"
     ></script>
     <!-- Video Сан -->
-    <script type="text/javascript" src="/js/venobox.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../src/scripts/library/venobox.min.js"
+    ></script>
     <script>
       $(document).ready(function () {
         $(".venobox").venobox({
