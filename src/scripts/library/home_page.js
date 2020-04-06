@@ -15,8 +15,12 @@ function slide() {
     let background = document.querySelector(".background");
     let indices = document.querySelectorAll(".index");
 
-
-    let bgImgs = ["./Slider_Cover/cover_bg.jpg", "./Slider_Cover/cover_2_bg.jpg", "Bali.jpg", "Thailand.jpg"];
+    let bgImgs = [
+      "./Slider_Cover/cover_bg.jpg",
+      "./Slider_Cover/cover_2_bg.jpg",
+      "Bali.jpg",
+      "Thailand.jpg"
+    ];
 
     let currentIndex = 0;
 
@@ -26,7 +30,7 @@ function slide() {
     var myAnimation = new hoverEffect({
       parent: background,
       intensity: 0.3,
-      imagesRatio: 960 / 100,
+      imagesRatio: 1080 / 1920,
       image1: `img/${bgImgs[0]}`,
       image2: `img/${bgImgs[1]}`,
       displacementImage: "img/displacement/10.jpg",
@@ -92,7 +96,10 @@ function slide() {
       showTextAnimation("prev");
       setTimeout(() => {
         let canvas = background.querySelectorAll("canvas");
-        background.insertBefore(canvas[canvas.length - 1], background.firstChild);
+        background.insertBefore(
+          canvas[canvas.length - 1],
+          background.firstChild
+        );
         distortAnimations[currentIndex].previous();
       }, 500);
     }
@@ -122,11 +129,9 @@ function slide() {
 
       if (descriptionDisplacement === 0 && direction === "prev") {
         descriptionDisplacement = -165;
-      }
-      else if (descriptionDisplacement === -165 && direction === "next") {
+      } else if (descriptionDisplacement === -165 && direction === "next") {
         descriptionDisplacement = 0;
-      }
-      else {
+      } else {
         descriptionDisplacement =
           direction === "next"
             ? descriptionDisplacement - 55
